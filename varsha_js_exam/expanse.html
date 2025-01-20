@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanse Convertor</title>
+    <script>
+        let expanse=[];
+        let amount=[];
+        let day=[];
+        
+        const expanseInput=document.getElementById('exp').value
+        const amtInput=parseInt(document.getElementById('amt').value)
+        const dateInput=document.getElementById('date').value
+
+        let other=document.createElement('option')
+        other.textContent='toy'
+        other.value='toy'
+        document.getElementById('otherOption').appendChild('other')
+
+        function handleClick(){
+            totalAmt=0;
+            if(amtInput !== ''){
+            totalAmt += amtInput;
+            document.write(`The total expanse = ${totalAmt}`)
+            amoumt.push(amtInput)
+            }
+
+            if(expanseInput !== ''){
+                expanse.push(expanseInput)
+            }
+             
+            if(dateInput !== ''){
+          
+           day.push(dateInput) 
+
+            }
+        }
+        
+
+        expanseInput=''
+        amtInput=''
+        dateInput=''  
+        
+       let month1=document.createElement('0ption')
+       month1.textContent='January'
+       month1.value='1'
+       document.getElementById('monthly').appendChild(month1)
+
+       let month2=document.createElement('option')
+       month2.textContent='February'
+       month2.value='2'
+       document.getElementById('monthly').appendChild(month2)
+
+       let month3=document.createElement('0ption')
+       month3.textContent='March'
+       month3.value='3'
+       document.getElementById('monthly').appendChild(month3)
+
+       let month4=document.createElement('option')
+       month4.textContent='April'
+       month2.value='4'
+       document.getElementById('monthly').appendChild(month4)
+
+       let month5=document.createElement('0ption')
+       month5.textContent='May'
+       month5.value='5'
+       document.getElementById('monthly').appendChild(month5)
+
+       let month6=document.createElement('option')
+       month6.textContent='June'
+       month6.value='6'
+       document.getElementById('monthly').appendChild(month6)
+
+       let month7=document.createElement('0ption')
+       month7.textContent='July'
+       month7.value='7'
+       document.getElementById('monthly').appendChild(month1)
+
+    
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <label>Type Of Expanse:</label>
+        <select id="exp">
+            <option value="1">Shopping</option>
+            <option value="2">Grocery</option>
+            <option value="3">Stationary</option>
+            <option value="4">Trip</option>
+            <option value="5" id="otherOption">Other</option>
+        </select><br>
+
+        <label>Amount:</label>
+        <input type="text" id="amt"><br>
+
+        <label>Date:</label>
+        <input type="date" id="date"><br>
+
+        <button onclick="handleClick()">Submit</button>
+    </div>
+
+    <div>
+        <button onclick="monthExpanse()">Show Monthly expanse</button>
+        <select id="monthly"></select>
+    </div>
+
+
+</body>
+</html>
